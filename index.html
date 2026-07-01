@@ -623,6 +623,7 @@
     .part-title { font-size: 26px; }
     footer { flex-direction: column; gap: 12px; text-align: center; }
     .contact-cards { flex-direction: column; align-items: center; }
+    .accom-grid { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 768px) {
@@ -677,6 +678,9 @@
     .footer-logo { font-size: 13px; }
     .footer-copy { font-size: 9px; text-align: center; }
     .footer-tagline { font-size: 11px; }
+    .accom-grid { grid-template-columns: 1fr; }
+    #accommodation { margin-bottom: 48px !important; }
+    #accommodation h2 { font-size: clamp(26px, 8vw, 38px) !important; }
   }
 
   .photo-credit {
@@ -685,6 +689,13 @@
     font-size: 8px; font-weight: 500; letter-spacing: 1.5px;
     color: rgba(255,255,255,0.35); text-transform: uppercase;
     pointer-events: none;
+  }
+
+  /* Accommodation tier grid */
+  .accom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
   }
 </style>
 </head>
@@ -890,7 +901,7 @@
     </div>
 
     <!-- Three tier cards -->
-    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px;">
+    <div class="accom-grid">
 
       <!-- LOW -->
       <div style="background:var(--white); box-shadow:0 4px 40px rgba(0,0,0,0.06); padding:40px 36px; display:flex; flex-direction:column; border-top:4px solid #8BAF7A;">
